@@ -1,0 +1,24 @@
+name:                fibs-fizz-buzz
+version:             0.0.0.0
+license:             AllRightsReserved
+author:              Ivan Malison
+maintainer:          IvanMalison@gmail.com
+cabal-version:       >=1.10
+
+library
+  hs-source-dirs:      src
+  exposed-modules:     FibsFizzBuzz
+  default-language:    Haskell2010
+  build-depends: base
+               , containers
+
+test-suite fibs-fizz-buzz-test
+  type:                exitcode-stdio-1.0
+  hs-source-dirs:      test
+  main-is:             Spec.hs
+  build-depends:       base
+                     , hspec
+                     , QuickCheck
+                     , fibs-fizz-buzz
+  ghc-options:         -threaded -rtsopts
+  default-language:    Haskell2010
